@@ -1,0 +1,42 @@
+### obtener todos los users
+GET http://localhost:3000/api/users
+
+
+### obtener un user
+GET http://localhost:3000/api/users/0
+
+### crear un nuevo user
+POST http://localhost:3000/api/new
+Content-Type: application/json
+
+{
+  "id": "1",
+  "name": "Atila",
+  "userClass": "warrior",
+  "eventsSell": [],
+  "eventsBuy": []
+}
+
+### modificar un user)
+PUT http://localhost:3000/api/users/0
+Content-Type: application/json
+
+{
+  "name": "Atilaseeo",
+  "userClass": "warriorrrr",
+  "eventsSell": [1,2],
+  "eventsBuy": []
+}
+
+### Agregar Compra de evento a user
+PATCH http://localhost:3000/api/users/0
+Content-Type: application/json
+
+{
+  "userClass": "warriorrrr",
+  "eventsSell": [],
+  "eventsBuy": [1]   
+}
+
+### borrar un user
+DELETE http://localhost:3000/api/users/0
